@@ -3,9 +3,17 @@
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
-
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h3>Thank you for your order!</h3>
+
+   <% @line_items.each do |item| %>
+    
+      <%= item.inspect %><br><br>
+    <% end %>
+
+
+    <h4>Confirmation sent to your email: <%= @order.email %> </h4>    
+    <h4>Order Total : <%= humanized_money_with_symbol @order.total_cents / 100 %> </h4>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
