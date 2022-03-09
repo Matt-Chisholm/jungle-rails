@@ -1,0 +1,20 @@
+  <div class="well text-center">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default categories">
+
+    <table class="table table-bordered">
+      <thead>
+          <th><h3>Categories:</h3></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+              <%= render @categories %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
