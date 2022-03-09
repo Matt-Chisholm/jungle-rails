@@ -1,20 +1,40 @@
-<section class="orders-show">
+<section>
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
-  <div class="order-summary jumbotron">
-    <h3>Thank you for your order!</h3>
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
 
-   <% @line_items.each do |item| %>
-    
-      <%= item.inspect %><br><br>
-    <% end %>
-
-
-    <h4>Confirmation sent to your email: <%= @order.email %> </h4>    
-    <h4>Order Total : <%= humanized_money_with_symbol @order.total_cents / 100 %> </h4>
+      <tbody>
+         <% @order_products.each_with_index { |product, index| %>
+          <%= render 'item', product: product, quantity: @line_items[index].quantity %>
+        <% } %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            <h4>Order Total : <%= humanized_money_with_symbol @order.total_cents / 100 %> </h4>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
   </div>
+   <div class="alert alert-info text-center" role="alert" >
+          <strong>
+          <h4>Confirmation sent to your Email: <%= @order.email %> </h4>
+          </strong>
+          </div>
+        
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 

@@ -90,3 +90,8 @@ main section.products-show {
   border-radius: 100em;
   width: 40%;
 }
+
+.order-item {
+  display: flex;
+  justify-content: space-around;
+}
