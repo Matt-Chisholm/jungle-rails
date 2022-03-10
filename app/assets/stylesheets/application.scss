@@ -16,3 +16,22 @@ form.button_to {
   display: inline;
 }
 
+//Registration form
+.register {
+  background-color: rgb(237, 242, 245);
+  display:flex;
+  justify-content: center;
+}
+
+.register input {
+  background-color: rgb(231, 255, 247);
+}
+
+.form-outline {
+  font-size: 16px;
+}
+
+.signed-in {
+  padding-top: 1em;
+  padding-left: 5em;
+}
