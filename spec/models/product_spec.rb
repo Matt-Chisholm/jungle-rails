@@ -3,6 +3,17 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
 
   describe 'Validations' do
+    it 'product will save' do
+      @category = Category.new(name: "Turtles")
+      @product = Product.new(
+        name: 'green turtle',
+        price: 5,
+        quantity: 10,
+        category: @category
+      )
+      @product.save
+      expect(@product).to be_valid
+    end
 
     it 'name is required' do
       @category = Category.new(name: "Turtles")
