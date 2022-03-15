@@ -22,7 +22,7 @@ RSpec.feature "User clicks one product partial to see details", type: :feature, 
       
 
       #DEBUG
-      save_screenshot
+      # save_screenshot
 
       #VERIFY
       expect(page).to have_content('Description')

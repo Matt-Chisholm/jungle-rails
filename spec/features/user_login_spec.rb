@@ -20,7 +20,7 @@ RSpec.feature "UserLogins", type: :feature, js: true do
         click_button("Submit")
 
         #DEBUG 
-        save_screenshot
+        # save_screenshot
 
         #VERIFY
         expect(page).to have_content('Signed in as test@test.com')

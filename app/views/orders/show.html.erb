@@ -31,7 +31,13 @@
   </div>
    <div class="alert alert-info text-center" role="alert" >
           <strong>
-          <h4>Confirmation sent to your Email: <%= @order.email %> </h4>
+          <h4>Confirmation sent to your Email: 
+          <% if current_user then %> 
+          <%= current_user.email  %>
+          <% else %>
+          <%= @order.email %>
+          <% end %>
+           </h4>
           </strong>
           </div>
         

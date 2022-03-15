@@ -22,7 +22,7 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
       
 
       #DEBUG
-      save_screenshot
+      # save_screenshot
 
       #VERIFY
       click_button('Add')
