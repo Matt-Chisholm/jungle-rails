@@ -36,17 +36,19 @@ RSpec.describe User, type: :model do
         last_name:             "User",
         email:                 "test@test.com",
         password:              '234',
-        password_confirmation: "123"
+        password_confirmation: "234"
       )
       @user = User.new(
         first_name:            "Test",
         last_name:             "User",
         email:                 "test@test.com",
         password:              '234',
-        password_confirmation: "123"
+        password_confirmation: "234"
       )
+      @user2.save
+      @user.save
       expect(@user).to be_invalid
-      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+      expect(@user.errors.full_messages).to include("Email has already been taken")
     end
 
     it 'is invalid if first_name missing' do
