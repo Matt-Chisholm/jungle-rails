@@ -1,6 +1,13 @@
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+Rails was premade with bugs and missing features and I was given real-world esque assignments simulating a real development job.
+
+## Screenshots
+
+![Home](https://github.com/Matt-Chisholm/jungle-rails/blob/master/lib/assets/homepage.png?raw=true)
+
+![Home](https://github.com/Matt-Chisholm/jungle-rails/blob/master/lib/assets/Aboutus.png?raw=true)
 
 ## Additional Steps for Apple M1 Machines
 
